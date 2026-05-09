@@ -3,22 +3,23 @@ import FooterColumn from "../ui/FooterColumn";
 
 const img4455958657592294930831097627784598206720464NPhotoroom1 =
 	"https://www.figma.com/api/mcp/asset/f46004db-779e-4b0b-8263-66e3d87169e3";
-const imgFiRrCopyright =
-	"https://www.figma.com/api/mcp/asset/07853aaf-656a-48ca-93a2-65b5f80bb39f";
 
 export default function Footer() {
 	return (
-		<footer className="pt-[140px] pb-[80px]">
+		<footer className="pt-[60px] pb-[40px] md:pt-[80px] md:pb-[60px] lg:pt-[100px] lg:pb-[80px]">
 			<Container>
-				<div className="grid grid-cols-[1.5fr_1fr_1fr_1.2fr] gap-[48px] items-start">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.2fr] gap-[32px] sm:gap-[48px] items-start">
 					<div>
 						<img
-							src={img4455958657592294930831097627784598206720464NPhotoroom1}
+							src={
+								img4455958657592294930831097627784598206720464NPhotoroom1
+							}
 							alt="RUI"
 							className="size-[114px]"
 						/>
 						<p className="mt-[28px] text-[15px] font-medium leading-[1.6] text-[#666] max-w-[320px]">
-							Delicie-se com a arte culinária africana, onde cada prato é uma obra-prima.
+							Delicie-se com a arte culinária africana, onde cada
+							prato é uma obra-prima.
 						</p>
 					</div>
 
@@ -43,8 +44,8 @@ export default function Footer() {
 					/>
 				</div>
 
-<div className="mt-[100px] flex flex-col md:flex-row items-center relative gap-6 pt-4 border-t border-gray-100">
-					<div className="flex items-center gap-[18px] md:absolute md:left-0">
+				<div className="mt-[60px] md:mt-[100px] flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-6 pt-4 border-t border-gray-100">
+					<div className="flex items-center gap-[14px] sm:gap-[18px] order-2 sm:order-1">
 						<a
 							href="https://facebook.com"
 							target="_blank"
@@ -92,8 +93,10 @@ export default function Footer() {
 						</a>
 					</div>
 
-					<div className="flex items-center justify-center w-full text-[16px] font-medium text-[#666] tracking-wide">
-						<span>Copyright © 2026 RUI UnIA | All rights reserved</span>
+					<div className="flex items-center justify-center w-full text-[14px] sm:text-[16px] font-medium text-[#666] tracking-wide order-1 sm:order-2">
+						<span>
+							Copyright © 2026 RUI UNIA | All rights reserved
+						</span>
 					</div>
 				</div>
 			</Container>

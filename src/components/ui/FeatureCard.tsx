@@ -3,7 +3,6 @@ type FeatureCardProps = {
 	title: string;
 	description: string;
 	iconClassName?: string;
-	circleImage?: string;
 	dataNodeId?: string;
 };
 
@@ -12,7 +11,6 @@ export default function FeatureCard({
 	title,
 	description,
 	iconClassName,
-	circleImage,
 	dataNodeId,
 }: FeatureCardProps) {
 	return (
