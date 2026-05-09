@@ -1,9 +1,10 @@
 import Container from "../../components/layout/Container";
 import DishCard from "../../components/ui/DishCard";
 import FeatureCard from "../../components/ui/FeatureCard";
-import FooterColumn from "../../components/ui/FooterColumn";
+import Footer from "../../components/layout/Footer";
 import PrimaryButton from "../../components/ui/PrimaryButton";
 import SectionHeading from "../../components/ui/SectionHeading";
+import { ChevronDown, PhoneCall, Search, User } from "lucide-react";
 
 const imgWhatsAppImage20260330At174320Photoroom1 =
 	"https://www.figma.com/api/mcp/asset/b6c2a8c8-ee56-49b8-8de6-a93a35368049";
@@ -47,24 +48,6 @@ const imgLine3 =
 	"https://www.figma.com/api/mcp/asset/2d07403c-389c-411d-a331-730a8de19c75";
 const imgVector2 =
 	"https://www.figma.com/api/mcp/asset/48e0888a-4b57-48e1-9f62-517d8c3840b4";
-const imgFiRrCopyright =
-	"https://www.figma.com/api/mcp/asset/07853aaf-656a-48ca-93a2-65b5f80bb39f";
-const imgVector5 =
-	"https://www.figma.com/api/mcp/asset/01dd6928-77b9-4bfb-babf-3a3c39f20812";
-const imgEllipse7 =
-	"https://www.figma.com/api/mcp/asset/a1186b8a-eb5a-4f02-9869-650116599732";
-const imgEllipse8 =
-	"https://www.figma.com/api/mcp/asset/458a140b-4878-4583-8f21-28ac8be0d365";
-const imgEllipse10 =
-	"https://www.figma.com/api/mcp/asset/88b19fc0-644b-4a5d-9ddf-ccea27c4a100";
-const imgIconFacebook =
-	"https://www.figma.com/api/mcp/asset/0e589a49-7a66-4b65-84b8-357341425668";
-const imgIconYoutube =
-	"https://www.figma.com/api/mcp/asset/c537c54a-e5b2-4e7e-b877-9b134a3882ce";
-const imgIconInstagram =
-	"https://www.figma.com/api/mcp/asset/eb4f64f7-a494-4452-8ea9-ba23957d632a";
-const imgF =
-	"https://www.figma.com/api/mcp/asset/b138464a-eb08-4edd-84e3-614f1442bf9a";
 const imgEllipse11 =
 	"https://www.figma.com/api/mcp/asset/999ce7cb-f2a0-4078-9691-87f99c7385ff";
 
@@ -74,7 +57,7 @@ const features = [
 		title: "Reservas Online",
 		description: "Agenda a tua refeição antecipadamente e elimina filas.",
 		icon: imgCalendar1,
-		iconClassName: "size-[84px]",
+		iconClassName: "size-[64px]",
 	},
 	{
 		id: "182:191",
@@ -82,7 +65,7 @@ const features = [
 		description:
 			"Consulta o menu diário e semanal com ingredientes, tempo de confecção em tempo real.",
 		icon: imgMenu1,
-		iconClassName: "size-[82px]",
+		iconClassName: "size-[62px]",
 	},
 	{
 		id: "182:192",
@@ -90,88 +73,89 @@ const features = [
 		description:
 			"Faz o pedido pelo site ou app, escolhe o horário e recolhe no balcão sem esperar na fila.",
 		icon: imgShoppingBag1,
-		iconClassName: "size-[88px]",
+		iconClassName: "size-[68px]",
 	},
 ];
 
 export default function Home() {
 	return (
 		<div className="bg-[#fcfcfc]" data-node-id="182:78">
-			<header className="pt-[38px]">
+			<header className="pt-[28px]">
 				<Container>
-					<div className="flex items-start justify-between">
+					<div className="flex flex-wrap items-start justify-between gap-[20px] lg:flex-nowrap sm:items-center">
 						<div className="flex items-center gap-[18px]">
 							<img
 								src={
 									img4455958657592294930831097627784598206720464NPhotoroom1
 								}
 								alt="RUI"
-								className="size-[97px] object-cover"
+								className="size-[88px] object-cover"
 							/>
 						</div>
-						<nav className="font-['Poppins'] text-[20px] text-[#272727]">
-							<ul className="flex items-start gap-[40px]">
+						<nav className="order-3 w-full font-['Poppins'] text-[16px] text-[#272727] sm:text-[18px] lg:order-none lg:w-auto">
+							<ul className="flex flex-wrap items-center gap-[24px] lg:flex-nowrap lg:gap-[32px]">
 								<li>
-									<a className="text-[#ff0202]" href="#">
+									<a
+										className="inline-flex items-center leading-none text-[#ff0202] transition-colors hover:text-[#ff0202]"
+										href="#"
+									>
 										Ínicio
 									</a>
 								</li>
-								<li className="relative">
-									<span className="flex items-center gap-[8px]">
+								<li className="group relative">
+									<button
+										type="button"
+										className="inline-flex items-center gap-[8px] leading-none transition-colors hover:text-[#ff0202]"
+										aria-haspopup="true"
+									>
 										Menu
-										<img
-											src={imgGroup2}
-											alt=""
-											className="h-[11px]"
-										/>
-									</span>
-									<ul className="mt-[12px] space-y-[6px] text-[20px] text-[rgba(0,0,0,0.47)]">
-										<li className="leading-[19px]">
-											Prato Principal
-										</li>
-										<li>
-											<img
-												src={imgLine3}
-												alt=""
-												className="w-[92px]"
-											/>
-										</li>
-										<li>Fast Food</li>
-										<li>Bebidas</li>
-										<li>
-											<img
-												src={imgLine3}
-												alt=""
-												className="w-[92px]"
-											/>
-										</li>
-									</ul>
+										<ChevronDown className="h-[14px] w-[14px] text-[#272727] transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180" />
+									</button>
+									<div className="hidden pt-[8px] group-hover:block group-focus-within:block lg:absolute lg:left-0 lg:top-full">
+										<ul className="w-[168px] rounded-[14px] border border-[rgba(0,0,0,0.08)] bg-white px-[14px] py-[10px] text-[18px] text-[rgba(0,0,0,0.47)] shadow-[0px_14px_30px_-18px_rgba(0,0,0,0.45)]">
+											<li className="leading-[19px] transition-colors hover:text-[#ff0202]">
+												Prato Principal
+											</li>
+											<li className="py-[4px]">
+												<span className="block h-[2px] w-[84px] bg-[#ff0202]" />
+											</li>
+											<li className="transition-colors hover:text-[#ff0202]">Fast Food</li>
+											<li className="transition-colors hover:text-[#ff0202]">Bebidas</li>
+											<li className="py-[4px]">
+												<span className="block h-[2px] w-[84px] bg-[#ff0202]" />
+											</li>
+										</ul>
+									</div>
 								</li>
 								<li>
-									<a href="#">Reservas</a>
+									<a
+										className="inline-flex items-center leading-none transition-colors hover:text-[#ff0202]"
+										href="#"
+									>
+										Reservas
+									</a>
 								</li>
 								<li>
-									<a href="#">Feedback</a>
+									<a
+										className="inline-flex items-center leading-none transition-colors hover:text-[#ff0202]"
+										href="#"
+									>
+										Feedback
+									</a>
 								</li>
 							</ul>
 						</nav>
-						<div className="flex items-center gap-[22px]">
-							<img
-								src={imgIconSearch}
-								alt="Pesquisar"
-								className="size-[24px]"
+						<div className="flex items-center gap-[14px] sm:gap-[18px]">
+							<Search
+								className="h-[20px] w-[20px] text-[#272727] sm:h-[22px] sm:w-[22px]"
+								aria-label="Pesquisar"
 							/>
-							<img
-								src={imgUser1}
-								alt="Usuário"
-								className="size-[31px] object-cover"
+							<User
+								className="h-[24px] w-[24px] text-[#272727] sm:h-[28px] sm:w-[28px]"
+								aria-label="Usuário"
 							/>
-							<button className="flex items-center gap-[12px] rounded-[40px] bg-[#ff0202] px-[22px] py-[12px] font-['Poppins'] text-[20px] text-white">
-								<img
-									src={imgVector2}
-									alt=""
-									className="size-[24px]"
-								/>
+							<button className="flex items-center gap-[10px] rounded-[40px] bg-[#ff0202] px-[16px] py-[8px] font-['Poppins'] text-[16px] text-white sm:px-[20px] sm:py-[10px] sm:text-[18px]">
+								<PhoneCall className="h-[18px] w-[18px] text-white sm:h-[20px] sm:w-[20px]" />
 								Contacto
 							</button>
 						</div>
@@ -180,52 +164,57 @@ export default function Home() {
 			</header>
 
 			<main>
-				<section className="relative pt-[150px]">
+				<section className="relative overflow-hidden">
 					<Container className="relative">
-						<div className="grid grid-cols-[1fr_662px] gap-[40px]">
-							<div>
-								<div className="relative inline-flex items-center">
-									<img
-										src={imgRectangle24}
-										alt=""
-										className="h-[67px] w-[248px]"
-									/>
-									<span className="absolute left-[27px] text-[20px] font-semibold text-[#ff6868]">
-										Vem pitar no RUI
-									</span>
-								</div>
-								<h1 className="mt-[36px] text-[62px] font-extrabold leading-[1.455] text-black">
-									<span className="text-[#ff0202]">RUI</span>,
-									UMA IMERSÃO
+						<div className="grid grid-cols-1 gap-[40px] lg:grid-cols-[1fr_550px]">
+							<div className="flex flex-col justify-center">
+								<h1 className="text-[40px] font-extrabold leading-[1.2] text-black sm:text-[40px] lg:text-[40px]">
+									<span className="text-[#ff0202]">RUI</span>, UMA IMERSÃO
 									<br />
 									DE{" "}
 									<span className="text-[#f0c322]">
 										SABORES.
 									</span>
 								</h1>
-								<p className="mt-[24px] max-w-[622px] text-[26px] font-medium leading-[1.705] text-[#4a4a4a]">
+								<p className="mt-[24px] max-w-[622px] text-[20px] font-medium leading-[1.6] text-[#4a4a4a] sm:text-[20px]">
 									Reserve a sua mesa, consulte o cardápio do
 									dia, pague com a carteira digital e avalie a
 									sua refeição, tudo numa só plataforma.
 								</p>
-								<PrimaryButton className="mt-[32px] h-[80px] w-[229px]">
-									Peça agora
-								</PrimaryButton>
+								<div className="mt-[40px]">
+									<PrimaryButton className="h-[70px] w-[200px] sm:h-[80px] sm:w-[229px]">
+										Peça agora
+									</PrimaryButton>
+								</div>
 							</div>
-							<div className="relative h-[856px]">
-								<div className="absolute right-[0px] top-[202px] h-[653.969px] w-[662.703px] rounded-[500px] bg-[#f0c322]" />
-								<div className="absolute right-0 top-[0px] h-[856px] w-[662px] overflow-hidden">
+							<div className="relative h-[500px] sm:h-[700px] lg:h-[856px]">
+								{/* Speech Bubble */}
+								<div className="absolute right-[55%] top-[10%] z-20 sm:right-[70%] sm:top-[120px] lg:right-[65%]">
+									<div className="relative flex h-[50px] items-center justify-center rounded-[12px] bg-white px-[20px] shadow-[0px_10px_30px_rgba(0,0,0,0.1)] after:absolute after:bottom-[-8px] after:right-[15%] after:h-0 after:w-0 after:border-l-[8px] after:border-r-[8px] after:border-t-[8px] after:border-l-transparent after:border-r-transparent after:border-t-white">
+										<span className="text-[14px] font-semibold text-[#ff6868] sm:text-[16px]">
+											Vem pitar no RUI
+										</span>
+									</div>
+								</div>
+
+								{/* Yellow Circle */}
+								<div className="absolute right-[50%] top-[150px] h-[350px] w-[350px] translate-x-[50%] rounded-full bg-[#f0c322] sm:h-[550px] sm:w-[550px] lg:right-[0px] lg:top-[202px] lg:h-[653px] lg:w-[662px] lg:translate-x-0" />
+
+								{/* Hero Image */}
+								<div className="absolute inset-0 flex items-end justify-center">
 									<img
 										src={
 											imgWhatsAppImage20260330At174320Photoroom1
 										}
-										alt=""
-										className="h-[137.3%] w-full object-cover"
+										alt="RUI Hero"
+										className="h-full w-auto object-contain lg:w-full lg:object-cover"
 									/>
 								</div>
 							</div>
 						</div>
-						<div className="mt-[-70px] flex justify-end gap-[24px]">
+
+						{/* Dish Cards Overlay */}
+						<div className="relative mt-[-40px] flex flex-wrap justify-center gap-[24px] lg:absolute lg:bottom-[-20px] lg:right-[0px] lg:mt-0 lg:justify-end">
 							<DishCard
 								name="Prato x"
 								price="10.000 AOA"
@@ -256,7 +245,7 @@ export default function Home() {
 							highlight="FUNCIONALIDADES"
 							dataNodeId="182:150"
 						/>
-						<div className="mt-[70px] grid grid-cols-3 gap-[48px]">
+						<div className="mt-[84px] grid grid-cols-1 gap-[32px] md:grid-cols-3 md:gap-[48px]">
 							{features.map((feature) => (
 								<FeatureCard
 									key={feature.id}
@@ -264,7 +253,6 @@ export default function Home() {
 									description={feature.description}
 									icon={feature.icon}
 									iconClassName={feature.iconClassName}
-									circleImage={imgEllipse11}
 									dataNodeId={feature.id}
 								/>
 							))}
@@ -274,15 +262,15 @@ export default function Home() {
 
 				<section className="pt-[180px]">
 					<Container>
-						<p className="text-[20px] font-bold uppercase tracking-[3.5px] text-[#ff6868]">
+						<p className="text-[13px] font-bold uppercase tracking-[3.5px] text-[#ff6868]">
 							RESTAURANTE UNIVERSITÁRIO ITINERANTE
 						</p>
-						<h2 className="mt-[24px] text-[60px] font-bold text-black">
+						<h2 className="mt-[24px] text-[36px] font-bold text-black">
 							SOBRE NÓS
 						</h2>
-						<div className="mt-[32px] max-w-[1436px] text-[26px] font-medium leading-[1.705] text-[#4a4a4a]">
+						<div className="mt-[32px] max-w-[1436px] text-[17px] font-medium leading-[1.705] text-[#4a4a4a]">
 							<p>
-								Somos o RUI — Restaurante Universitário
+								Somos o RUI - Restaurante Universitário
 								Itinerante, um verdadeiro laboratório de
 								experiências criado no seio da Faculdade de
 								Ciências Económicas e Gestão. Mais do que uma
@@ -355,99 +343,7 @@ export default function Home() {
 				</section>
 			</main>
 
-			<footer className="pt-[180px] pb-[60px]">
-				<Container>
-					<div className="grid grid-cols-[1.2fr_1fr_1fr_1fr] gap-[48px]">
-						<div>
-							<img
-								src={
-									img4455958657592294930831097627784598206720464NPhotoroom1
-								}
-								alt="RUI"
-								className="size-[97px]"
-							/>
-							<p className="mt-[20px] text-[24px] font-medium leading-[1.243] text-[#555]">
-								Delicie-se com a arte culinária africana, onde
-								cada prato é uma obra-prima.
-							</p>
-						</div>
-						<FooterColumn
-							title="Links úteis"
-							items={["Sobre nós", "Edições"]}
-						/>
-						<FooterColumn
-							title="Serviços"
-							items={["Ínicio", "Menu", "Carteira"]}
-						/>
-						<FooterColumn
-							title="Contacta-nos"
-							items={[
-								"restauranteuniversitarioitener@gmail.com",
-								"+244 945 288 164",
-								"@rui.unia",
-							]}
-						/>
-					</div>
-					<div className="mt-[40px] flex items-center gap-[18px]">
-						<div className="relative">
-							<img
-								src={imgEllipse7}
-								alt=""
-								className="size-[57px]"
-							/>
-							<img
-								src={imgIconFacebook}
-								alt="Facebook"
-								className="absolute left-[14px] top-[14px] h-[25px] w-[14px]"
-							/>
-						</div>
-						<div className="relative">
-							<img
-								src={imgEllipse8}
-								alt=""
-								className="size-[57px]"
-							/>
-							<img
-								src={imgIconInstagram}
-								alt="Instagram"
-								className="absolute left-[17px] top-[17px] size-[22px]"
-							/>
-						</div>
-						<div className="relative">
-							<img
-								src={imgEllipse10}
-								alt=""
-								className="size-[57px]"
-							/>
-							<img
-								src={imgIconYoutube}
-								alt="YouTube"
-								className="absolute left-[16px] top-[19px] h-[19px] w-[27px]"
-							/>
-						</div>
-					</div>
-					<div className="mt-[30px] flex items-center gap-[12px] text-[22px] font-medium text-[#555]">
-						<img
-							src={imgFiRrCopyright}
-							alt=""
-							className="size-[18px]"
-						/>
-						<img
-							src={imgVector5}
-							alt=""
-							className="-ml-[18px] size-[18px]"
-						/>
-						<span>
-							Copyright 2026 RUI UnIA | All rights reserved
-						</span>
-					</div>
-					<img
-						src={imgF}
-						alt=""
-						className="mt-[12px] h-[24px] w-[18px]"
-					/>
-				</Container>
-			</footer>
+			<Footer />
 		</div>
 	);
 }

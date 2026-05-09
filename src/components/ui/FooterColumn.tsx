@@ -11,10 +11,15 @@ export default function FooterColumn({
 }: FooterColumnProps) {
 	return (
 		<div className={className}>
-			<h4 className="text-[26px] font-semibold text-black">{title}</h4>
-			<ul className="mt-[20px] space-y-[16px] text-[24px] font-medium text-[#555]">
+			<h4 className="font-poppins text-[22px] font-bold text-black">{title}</h4>
+			<ul className="mt-[28px] space-y-[18px] text-[15px] font-medium text-[#666]">
 				{items.map((item) => (
-					<li key={item}>{item}</li>
+					<li
+						key={item}
+						className="cursor-pointer transition-colors hover:text-red-600 break-words"
+					>
+						{item}
+					</li>
 				))}
 			</ul>
 		</div>

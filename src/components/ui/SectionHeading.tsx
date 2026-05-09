@@ -13,10 +13,10 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
 	return (
 		<div className="text-center" data-node-id={dataNodeId}>
-			<p className="text-[20px] font-bold uppercase tracking-[3.5px] text-[#f0c322]">
+			<p className="text-[12px] font-bold uppercase tracking-[4px] text-[#f0c322]">
 				{eyebrow}
 			</p>
-			<h2 className="mt-[22px] text-[60px] font-bold text-black">
+			<h2 className="mt-[16px] text-[36px] font-extrabold text-black sm:text-[44px]">
 				{title}{" "}
 				{highlight ? (
 					<span className="text-[#ff0202]">{highlight}</span>

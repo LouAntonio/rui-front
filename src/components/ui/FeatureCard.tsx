@@ -17,27 +17,20 @@ export default function FeatureCard({
 }: FeatureCardProps) {
 	return (
 		<div
-			className="rounded-[40px] bg-white p-[32px] text-center shadow-[2px_10px_30px_0px_rgba(0,0,0,0.1)]"
+			className="flex flex-col items-center rounded-[35px] bg-white px-[32px] py-[48px] text-center shadow-[0px_4px_40px_rgba(0,0,0,0.06)] transition-transform hover:scale-[1.02]"
 			data-node-id={dataNodeId}
 		>
-			<div className="relative mx-auto flex size-[153px] items-center justify-center rounded-full bg-white">
-				{circleImage ? (
-					<img
-						src={circleImage}
-						alt=""
-						className="absolute inset-0 size-full"
-					/>
-				) : null}
+			<div className="flex size-[140px] items-center justify-center rounded-full bg-[#f0c322]">
 				<img
 					src={icon}
 					alt=""
-					className={`relative object-contain ${iconClassName ?? "size-[88px]"}`}
+					className={`object-contain brightness-0 invert ${iconClassName ?? "size-[70px]"}`}
 				/>
 			</div>
-			<h3 className="mt-[22px] text-[30px] font-semibold text-[#1e1e1e]">
+			<h3 className="mt-[24px] text-[18px] font-bold text-[#272727]">
 				{title}
 			</h3>
-			<p className="mt-[12px] text-[16px] font-medium text-[#555]">
+			<p className="mt-[8px] max-w-[240px] text-[15px] font-medium leading-[1.5] text-[#757575]">
 				{description}
 			</p>
 		</div>

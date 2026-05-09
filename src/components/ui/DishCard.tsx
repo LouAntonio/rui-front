@@ -32,7 +32,7 @@ export default function DishCard({
 				/>
 			</div>
 			<div>
-				<h4 className="text-[22px] font-semibold text-[#2c2c2c]">
+				<h4 className="text-[16px] font-semibold text-[#2c2c2c]">
 					{name}
 				</h4>
 				<div className="mt-[6px] flex items-center gap-[7px]">
@@ -45,7 +45,7 @@ export default function DishCard({
 						/>
 					))}
 				</div>
-				<p className="mt-[6px] text-[24px] font-semibold text-[#515151]">
+				<p className="mt-[6px] text-[18px] font-semibold text-[#515151]">
 					{price}
 				</p>
 			</div>
