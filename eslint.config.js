@@ -21,6 +21,7 @@ export default defineConfig([
 		rules: {
 			indent: ["error", "tab", { SwitchCase: 1 }],
 			"no-tabs": "off",
+			"react-hooks/set-state-in-effect": "off",
 		},
 	},
 ]);
