@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "../pages/Home";
+import Menu from "../pages/Menu";
 import Login from "../pages/admin/Login";
 import AdminLayout from "../components/admin/AdminLayout";
 import ProtectedRoute from "../components/admin/ProtectedRoute";
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Home />,
+	},
+	{
+		path: "/menu",
+		element: <Menu />,
 	},
 	{
 		path: "/admin/login",
